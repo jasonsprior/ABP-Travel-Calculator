@@ -74,7 +74,7 @@ function getDistance(event) {
                             var roundTrip= distance * 2;
                             var rate = $('input[name=rate]').val();
 
-                            var adjustedRoundTrip = roundTrip - allowance;
+                            var adjustedRoundTrip = parseInt(roundTrip - allowance);
                             var travelCost= "$" + parseInt(adjustedRoundTrip * rate);
                             console.log(travelCost);
 
