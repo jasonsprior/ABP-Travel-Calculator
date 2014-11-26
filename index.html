@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mileage Calculator</title>
+    <!-- this first stylesheet resets styles to common defaults across browsers -->
+<!--     <link rel="stylesheet" href="css/reset.css" media="screen" type="text/css" />     -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+</head>
+<body>
+    <main>
+        <div class="site-wrapper">
+
+                <h1 class="cover-heading">Travel Expense Calculator</h1>
+                <form class = "inputs">
+                    <p>Please enter the venue's name or address</p>
+                    <div class="input-group input-group-lg">
+                        <input type="text" class="form-control" name="destination" placeholder="ex. Blacksmith Shop Macon, 123 Main Street">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit" name="calculate">Go!</button>
+                        </span>
+                    </div><!-- /input-group -->
+                    <button class="btn btn-default btn-sm" type="button" id="expandSettings">Settings</button>
+                </form>
+
+
+                <div class = "param-wrapper">
+                    <form class="parameters input-group input-group-lg">
+                   
+                        <label>Origin Address
+                            <input type="text" class="form-control" name="origin"/>
+                        </label>
+                        <label>Travel Allowance (miles)
+                            <input type="number" class="form-control" name="allowance" min="0" max="150"/>
+                        </label>
+                        <label>Mileage Rate ($/mile)
+                            <input type="number" class="form-control" name="rate" step="any" min="0" max="1"/>
+                        </label>
+                    </form>
+                </div>
+        
+                <section class="results-add hide">
+                    <table class="addresses table table-hover">
+                        <tr>
+                            <td>Origin</td>
+                            <td>Amanda's House</td>
+                        </tr>
+                        <tr>
+                            <td>Destination Address</td>
+                            <td id="destadd"></td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section class="results-calc hide">
+                    <table class="calculation table table-hover">
+                        <tr class="warning">
+                            <td>Round Trip Distance (miles)</td>
+                            <td id="roundTripMileage"></td>
+                        </tr>
+                       <tr class="warning">
+                            <td>Travel Allowance (miles):</td>
+                            <td id="allowance"></td>
+                        </tr>
+                        <tr class="warning">
+                            <td>Miles Over Travel Allowance:</td>
+                            <td id="postAllowance"></td>
+                        </tr>
+                        <tr>
+                            <td>Mileage Rate ($/mile)</td>
+                            <td id="mileageRate"></td>
+                        </tr>
+                        <tr class="success">
+                            <td>Additional Cost:</td>
+                            <td id="cost"></td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section class="covered hide">
+                    <table class="table table-hover">
+                        <tr class="success">
+                            <td>Great News! This venue is covered by your travel allowance.  No additional travel charges apply.</td>
+                        </tr>
+                    </table>
+                </section>
+        
+                <div id="instafeed"></div>
+        </div>
+    </main>
+    <script src='http://code.jquery.com/jquery-1.11.1.min.js'></script>
+    <script src="js/index.js"></script>
+    <script type="text/javascript" src="js/instafeed.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+</body>
+</html>

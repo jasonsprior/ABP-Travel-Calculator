@@ -1,0 +1,73 @@
+h1{
+	text-align: center;
+}
+
+label{
+	display: block;
+}
+
+
+
+#instafeed{
+	margin-top: 2em;
+}
+
+body{
+	margin: 2em;
+}
+
+.inputs{
+	display:block;
+}
+
+#expandSettings{
+	float:right;
+	margin: 5px 0 5px 0;
+}
+
+.inputs, .parameters, .results-add, .results-calc, .covered{
+	width: 50%;
+	margin:auto;
+}
+
+
+.param-wrapper{
+	display:block;
+	margin: 2em 0 0 0;
+}
+
+.parameters{
+	margin-top: 2em;
+	border-radius:0.5em;
+}
+
+
+
+.parameters input{
+	background-color: #F2F2E6;
+	border:none;
+	box-shadow: none;
+}
+
+body{
+	background-color: #F2F2E6;
+}
+
+.parameters{
+	display:none;
+}
+
+.covered td{
+	text-align: center;
+}
+
+.hide{
+	display: none;
+}
+
+
+.calculation{
+	margin-top: 1em;
+}
+
+
