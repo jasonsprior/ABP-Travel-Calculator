@@ -70,7 +70,7 @@ function getDistance(event) {
 
                         $('#destadd').text(to);
 
-                        if (distance > allowance){
+                        if (distance > allowance && distance < 200){
                             var roundTrip= distance * 2;
                             var rate = $('input[name=rate]').val();
 
@@ -81,16 +81,23 @@ function getDistance(event) {
                             $('.results-add').removeClass("hide");
                             $('.results-calc').removeClass("hide");
                             $('.covered').addClass("hide");
+                            $('.max-dist').addClass("hide");
                             $('#roundTripMileage').text(roundTrip);
                             $('#allowance').text(allowance);
                             $('#postAllowance').text(adjustedRoundTrip);
                             $('#mileageRate').text(rate);
                             $('#cost').text(travelCost);
                         }
-                        else{
+                        else if (distance < 200){
+                            console.log("less than 200, greater than allowacne")
                             $('.covered').removeClass("hide");
                             $('.results-add').removeClass("hide");
                             $('.results-calc').addClass("hide");
+                            $('.max-dist').addClass("hide");
+                        }
+                        else{
+                            $('.results-add').removeClass("hide");
+                            $('.max-dist').removeClass("hide");
                         }
                     }
 

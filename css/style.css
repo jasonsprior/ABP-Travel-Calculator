@@ -25,7 +25,7 @@ body{
 	margin: 5px 0 5px 0;
 }
 
-.inputs, .parameters, .results-add, .results-calc, .covered{
+.inputs, .parameters, .results-add, .results-calc, .covered, .max-dist{
 	width: 50%;
 	margin:auto;
 }
