@@ -98,6 +98,8 @@ function getDistance(event) {
                         else{
                             $('.results-add').removeClass("hide");
                             $('.max-dist').removeClass("hide");
+                            $('.results-calc').addClass("hide");
+                            $('.covered').addClass("hide");
                         }
                     }
 

@@ -57,7 +57,7 @@ body{
 	display:none;
 }
 
-.covered td{
+.covered td, .max-dist td{
 	text-align: center;
 }
 
