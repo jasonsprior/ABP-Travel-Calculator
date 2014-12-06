@@ -104,7 +104,7 @@ function getDistance(event) {
                     }
 
                 }
-            } else {window.alert("Oops!  Google couldn't find your destination, please review and try again");}
+            } else {window.alert("Oops!  Google couldn't find your location, please review and try again");}
         }
     };
 
